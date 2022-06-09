@@ -1,13 +1,13 @@
 package org.eclipse.jetty.demo.listener;
 
-import org.eclipse.jetty.websocket.servlet.WebSocketServlet;
-import org.eclipse.jetty.websocket.servlet.WebSocketServletFactory;
+import org.eclipse.jetty.websocket.server.JettyWebSocketServlet;
+import org.eclipse.jetty.websocket.server.JettyWebSocketServletFactory;
 
 @SuppressWarnings("serial")
-public class EchoSocketServlet extends WebSocketServlet
+public class EchoSocketServlet extends JettyWebSocketServlet
 {
     @Override
-    public void configure(WebSocketServletFactory factory)
+    public void configure(JettyWebSocketServletFactory factory)
     {
         factory.register(EchoSocket.class);
     }
