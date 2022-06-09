@@ -2,14 +2,14 @@ package org.eclipse.jetty.demo.jsr.annotated;
 
 import java.net.URL;
 import java.util.Objects;
-import javax.servlet.ServletException;
-import javax.websocket.DeploymentException;
 
+import jakarta.servlet.ServletException;
+import jakarta.websocket.DeploymentException;
 import org.eclipse.jetty.server.Server;
 import org.eclipse.jetty.servlet.DefaultServlet;
 import org.eclipse.jetty.servlet.ServletContextHandler;
 import org.eclipse.jetty.servlet.ServletHolder;
-import org.eclipse.jetty.websocket.javax.server.config.JavaxWebSocketServletContainerInitializer;
+import org.eclipse.jetty.websocket.jakarta.server.config.JakartaWebSocketServletContainerInitializer;
 
 public class Main
 {
@@ -21,8 +21,8 @@ public class Main
         servletContextHandler.setContextPath("/");
         server.setHandler(servletContextHandler);
 
-        // Add javax.websocket support
-        JavaxWebSocketServletContainerInitializer.configure(servletContextHandler, (context, container) ->
+        // Add jakarta.websocket support
+        JakartaWebSocketServletContainerInitializer.configure(servletContextHandler, (context, container) ->
         {
             // Add echo endpoint to server container
             container.addEndpoint(EchoSocket.class);

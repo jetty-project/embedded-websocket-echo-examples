@@ -12,8 +12,8 @@ Jetty WebSocket Native API Examples
  * org.eclipse.jetty.demo.adapter - create a WebSocket using a WebSocketAdapter
  * org.eclipse.jetty.demo.annotated - create a WebSocket using @WebSocket annotation
 
-JSR-356 (javax.websocket) API Examples
+JSR-356 (jakarta.websocket) API Examples
 
- * org.eclipse.jetty.demo.jsr.annotated - create a WebSocket using @ServerEndpoint annotation
- * org.eclipse.jetty.demo.jsr.endpoint - create a WebSocket using a javax.websocket.EndPoint
+* org.eclipse.jetty.demo.jsr.annotated - create a WebSocket using @ServerEndpoint annotation
+* org.eclipse.jetty.demo.jsr.endpoint - create a WebSocket using a jakarta.websocket.EndPoint
 
