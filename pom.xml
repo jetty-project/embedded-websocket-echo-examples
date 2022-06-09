@@ -3,7 +3,7 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>org.eclipse.jetty.demo</groupId>
   <artifactId>embedded-websocket-echo-examples</artifactId>
-  <version>9.2-SNAPSHOT</version>
+  <version>1-SNAPSHOT</version>
   <packaging>jar</packaging>
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
