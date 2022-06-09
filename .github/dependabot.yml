@@ -1,0 +1,54 @@
+version: 2
+updates:
+  - package-ecosystem: "github-actions"
+    directory: "/"
+    schedule:
+      interval: "weekly"
+
+  - package-ecosystem: "maven"
+    directory: "/"
+    target-branch: "jetty-9.4.x"
+    schedule:
+      interval: "daily"
+    ignore:
+      # Restrict updates in this branch to jetty in the 9.4.x space
+      - dependency-name: "org.eclipse.jetty.websocket:javax-websocket-server-impl"
+        versions: [ ">=10.0.0" ]
+      - dependency-name: "org.eclipse.jetty:jetty-cdi"
+        versions: [ ">=10.0.0" ]
+      - dependency-name: "org.eclipse.jetty:jetty-servlet"
+        versions: [ ">=10.0.0" ]
+      - dependency-name: "org.jboss.weld.servlet:weld-servlet-core"
+        versions: [ ">=4.0.0" ]
+
+  - package-ecosystem: "maven"
+    directory: "/"
+    target-branch: "jetty-10.0.x"
+    schedule:
+      interval: "daily"
+    ignore:
+      # Restrict updates in this branch to jetty in the 10.x.x space
+      - dependency-name: "org.eclipse.jetty.websocket:websocket-javax-server"
+        versions: [ "<=10.0.0", ">=11.0.0" ]
+      - dependency-name: "org.eclipse.jetty:jetty-cdi"
+        versions: [ "<=10.0.0", ">=11.0.0" ]
+      - dependency-name: "org.eclipse.jetty:jetty-servlet"
+        versions: [ "<=10.0.0", ">=11.0.0" ]
+      - dependency-name: "org.jboss.weld.servlet:weld-servlet-core"
+        versions: [ ">=4.0.0" ]
+
+  - package-ecosystem: "maven"
+    directory: "/"
+    target-branch: "jetty-11.0.x"
+    schedule:
+      interval: "daily"
+    ignore:
+      # Restrict updates in this branch to jetty in the 11.x.x space
+      - dependency-name: "org.eclipse.jetty.websocket:websocket-jakarta-server"
+        versions: [ ">=12.0.0" ]
+      - dependency-name: "org.eclipse.jetty:jetty-cdi"
+        versions: [ ">=12.0.0" ]
+      - dependency-name: "org.eclipse.jetty:jetty-servlet"
+        versions: [ ">=12.0.0" ]
+      - dependency-name: "org.jboss.weld.servlet:weld-servlet-core"
+        versions: [ ">=5.0.0" ]
