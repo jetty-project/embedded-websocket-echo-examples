@@ -26,7 +26,7 @@
     <maven.war.plugin.version>3.3.2</maven.war.plugin.version>
     <license.plugin.version>4.1</license.plugin.version>
 
-    <jetty.version>9.4.46.v20220331</jetty.version>
+    <jetty.version>9.4.48.v20220622</jetty.version>
   </properties>
 
   <dependencies>
